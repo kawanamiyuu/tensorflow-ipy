@@ -17,6 +17,8 @@ import tensorflow as tf
 x = tf.placeholder(tf.float32, [None,784])
 
 #入力層→中間層の重みを定義(重みの初期値をゼロにしては行けないのですよ！！)
+#→重みの初期値が0だと、学習させても重みが更新されない！（→学習しない）
+#→正規分布に則ったノイズを入れる
 W1 = tf.Variable(tf.truncated_normal([784,100],0,0.1))
 #W1 = tf.Variable(tf.zeros([784,100]))
 

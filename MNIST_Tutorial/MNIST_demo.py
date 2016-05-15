@@ -10,7 +10,7 @@ import tensorflow as tf
 #入力層を作るよ（ミニバッチ数は任意）
 x = tf.placeholder(tf.float32, [None,784])
 
-#入力層→出力層間の重みを定義
+#入力層→出力層間の重みを定義（＝入力層のノード数 * 出力層の数）
 W = tf.Variable(tf.zeros([784,10]))
 
 #バイアスを定義
