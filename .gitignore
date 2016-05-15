@@ -2,7 +2,8 @@
 *.pyc
 *.class
 *.swp
-.vagrant
+.idea/
+.vagrant/
 tensorflow_source/
 notebooks/.ipynb_checkpoints/
 notebooks/MNIST_data/
