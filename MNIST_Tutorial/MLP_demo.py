@@ -75,12 +75,12 @@ accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 #学習を１０００回繰り返す
 #ミニバッチのサイズは１００
 for i in range(3000):
- batch_xs,batch_ys = mnist.train.next_batch(100)
- sess.run(train_step, feed_dict = {x:batch_xs, y_:batch_ys})
-
-#100回学習したら、モデルの評価を行う
- if i % 100 == 0:
-  print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+        batch_xs,batch_ys = mnist.train.next_batch(100)
+        sess.run(train_step, feed_dict = {x:batch_xs, y_:batch_ys})
+        
+        #100回学習したら、モデルの評価を行う
+        if i % 100 == 0:
+                print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
 
 print "finish"
 
