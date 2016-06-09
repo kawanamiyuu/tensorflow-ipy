@@ -41,8 +41,8 @@ sess.run(init)
 #学習を１０００回繰り返す
 #ミニバッチのサイズは１００
 for i in range(1000):
- batch_xs,batch_ys = mnist.train.next_batch(100)
- sess.run(train_step, feed_dict = {x:batch_xs, y_:batch_ys})
+        batch_xs,batch_ys = mnist.train.next_batch(100)
+        sess.run(train_step, feed_dict = {x:batch_xs, y_:batch_ys})
 
 #モデルの評価を行う
 #最大の値が同じ場所ならいいわけです
